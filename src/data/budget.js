@@ -1,0 +1,33 @@
+export const JPY = 0.48; // 1 JPY = 0,48 ₽
+export const USD = 75;   // 1 USD = 75 ₽
+
+export const BUDGET = {
+  paid: [
+    { name: "Авиабилеты (2 чел.)", rub: 105430, note: "China Southern, оплачено" },
+    { name: "Airbnb Коэндзи (12 ночей)", rub: 62000, note: "Suginami City, 6–18 июня" },
+    { name: "Tinkoff Premium", rub: 3000, note: "Страховка + бизнес-зал включены" },
+  ],
+  upcoming: [
+    { name: "Рёкан Хаконэ (1 ночь)", rub: Math.round(250 * USD), note: "до $250 — rotenburo в номере" },
+    { name: "Odakyu Romancecar (2 чел.)", rub: Math.round(4940 * JPY), note: "Синдзюку→Хаконэ-Юмото ¥2,470/чел — бронировать на odakyu.jp" },
+    { name: "JR Одавара ↔ Атами (2 чел.)", rub: Math.round(1640 * JPY), note: "¥410/чел в одну сторону" },
+    { name: "Disneyland (2 билета)", rub: Math.round(10900 * 2 * JPY), note: "¥10,900 × 2 — tokyodisneyresort.jp" },
+    { name: "teamLab Planets (2 билета)", rub: Math.round(3200 * 2 * JPY), note: "¥3,200 × 2 — teamlab.art" },
+  ],
+  variable: [
+    { name: "Еда (12 дней × 2 чел.)", rub: 40000, note: "Kombini + обеды + ужины" },
+    { name: "Транспорт по Токио (Suica)", rub: Math.round(500 * 2 * 12 * JPY), note: "~¥500 × 2 × 12 дней" },
+    { name: "Daikoku (Uber туда-обратно)", rub: Math.round(8500 * JPY), note: "~¥8,500 обе стороны" },
+    { name: "Клуб (вход + напитки, 2 чел.)", rub: Math.round(11000 * JPY), note: "WOMB или Zero Tokyo" },
+    { name: "Музеи / смотровые / прочее", rub: Math.round(10000 * JPY), note: "Нац. музей + Дайбуцу + NACT" },
+  ],
+};
+
+export const totalPaid = BUDGET.paid.reduce((s, i) => s + i.rub, 0);
+export const totalUpcoming = BUDGET.upcoming.reduce((s, i) => s + i.rub, 0);
+export const totalVariable = BUDGET.variable.reduce((s, i) => s + i.rub, 0);
+export const grandTotal = totalPaid + totalUpcoming + totalVariable;
+
+export function fmt(n) {
+  return n.toLocaleString("ru-RU") + " ₽";
+}
