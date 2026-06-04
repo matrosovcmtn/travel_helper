@@ -12,14 +12,14 @@ export const BUDGET = {
     { name: "Odakyu Romancecar (2 чел.)", rub: Math.round(4940 * JPY), note: "Синдзюку→Хаконэ-Юмото ¥2,470/чел — бронировать на odakyu.jp" },
     { name: "JR Одавара ↔ Атами (2 чел.)", rub: Math.round(1640 * JPY), note: "¥410/чел в одну сторону" },
     { name: "Disneyland (2 билета)", rub: Math.round(10900 * 2 * JPY), note: "¥10,900 × 2 — tokyodisneyresort.jp" },
-    { name: "teamLab Planets (2 билета)", rub: Math.round(3200 * 2 * JPY), note: "¥3,200 × 2 — teamlab.art" },
+    { name: "teamLab Borderless (2 билета)", rub: Math.round(4800 * 2 * JPY), note: "¥4,800 × 2 (вс, Адзабудай) — teamlab.art" },
   ],
   variable: [
     { name: "Еда (12 дней × 2 чел.)", rub: 40000, note: "Kombini + обеды + ужины" },
     { name: "Транспорт по Токио (Suica)", rub: Math.round(500 * 2 * 12 * JPY), note: "~¥500 × 2 × 12 дней" },
     { name: "Daikoku (Uber туда-обратно)", rub: Math.round(8500 * JPY), note: "~¥8,500 обе стороны" },
     { name: "Клуб (вход + напитки, 2 чел.)", rub: Math.round(11000 * JPY), note: "WOMB или Zero Tokyo" },
-    { name: "Музеи / смотровые / прочее", rub: Math.round(10000 * JPY), note: "Нац. музей + Дайбуцу + NACT" },
+    { name: "Музеи / смотровые / прочее", rub: Math.round(12000 * JPY), note: "Нац. музей (Уэно) + Mori Art Museum (~¥2,300×2, смотровая включена)" },
   ],
 };
 

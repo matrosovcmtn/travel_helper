@@ -7,7 +7,7 @@ const SECTIONS = [
     items: [
       { key: "ryokan", text: "Забронировать рёкан Хаконэ", sub: "Booking.com — до $250, искать Hakone Suimeisou или аналог с rotenburo", urgent: true },
       { key: "disney", text: "Купить билеты Disneyland", sub: "tokyodisneyresort.jp — продают только онлайн, быстро раскупают", urgent: true },
-      { key: "teamlab", text: "Забронировать teamLab Planets", sub: "teamlab.art — 14 июня, ¥3,200/чел", urgent: true },
+      { key: "teamlab", text: "Забронировать teamLab Borderless", sub: "teamlab.art — Адзабудай, 14 июня, ~¥4,800/чел (в обуви, не Planets)", urgent: true },
       { key: "romance", text: "Купить Odakyu Romancecar", sub: "odakyu.jp/english — Синдзюку→Хаконэ 8 июня, ¥2,470/чел", urgent: true },
       { key: "cafe", text: "Забронировать тематическое кафе", sub: "Temari no Ouchi (кошки) или Mèow — онлайн, день 6 (12 июня)", urgent: true },
     ],
@@ -28,7 +28,7 @@ const SECTIONS = [
     title: "🎫 БИЛЕТЫ И БРОНИРОВАНИЯ", color: "#3a9a5a",
     items: [
       { key: "t_disney", text: "Disneyland", sub: "tokyodisneyresort.jp — 15 июня", urgent: true },
-      { key: "t_teamlab", text: "teamLab Planets", sub: "teamlab.art — 14 июня", urgent: true },
+      { key: "t_teamlab", text: "teamLab Borderless", sub: "teamlab.art — Адзабудай, 14 июня", urgent: true },
       { key: "t_romance", text: "Romancecar", sub: "odakyu.jp — 8 июня, поезд ~7:50 из Синдзюку", urgent: true },
       { key: "t_ryokan", text: "Рёкан Хаконэ", sub: "Booking.com — ночь 8 июня", urgent: true },
       { key: "t_womb", text: "Клуб WOMB или Zero Tokyo", sub: "Проверить предпродажу на их сайтах — ночь 13 или 14 июня" },
