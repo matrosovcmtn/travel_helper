@@ -13,9 +13,10 @@ export const CAT = {
 export const LOCS = [
   { lat: 35.708, lng: 139.649, name: "Коэндзи (база)",      day: "Все дни — жильё",  cat: "base"  },
   { lat: 35.661, lng: 139.668, name: "Симокитадзава",       day: "День 1",           cat: "sight" },
-  { lat: 35.715, lng: 139.797, name: "Асакуса",             day: "День 4",           cat: "sight" },
-  { lat: 35.719, lng: 139.774, name: "Уэно",                day: "День 4",           cat: "art"   },
-  { lat: 35.702, lng: 139.774, name: "Акихабара",           day: "День 4",           cat: "shop"  },
+  { lat: 35.700, lng: 139.573, name: "Кичидзодзи (парк)",   day: "День 1",           cat: "sight" },
+  { lat: 35.715, lng: 139.797, name: "Асакуса",             day: "День 2",           cat: "sight" },
+  { lat: 35.710, lng: 139.811, name: "Tokyo Skytree",       day: "День 2",           cat: "sight" },
+  { lat: 35.702, lng: 139.774, name: "Акихабара",           day: "День 2",           cat: "shop"  },
   { lat: 35.694, lng: 139.704, name: "Синдзюку",            day: "День 5",           cat: "sight" },
   { lat: 35.676, lng: 139.699, name: "Мэйдзи-дзингу",       day: "День 6",           cat: "sight" },
   { lat: 35.670, lng: 139.703, name: "Харадзюку",           day: "День 6",           cat: "shop"  },
@@ -29,10 +30,10 @@ export const LOCS = [
   { lat: 35.727, lng: 139.765, name: "Янака",               day: "День 10",          cat: "sight" },
   { lat: 35.633, lng: 139.880, name: "Disneyland",          day: "День 9",           cat: "fun"   },
   { lat: 35.454, lng: 139.649, name: "Daikoku PA",          day: "Ночь дня 6",       cat: "night" },
-  { lat: 35.234, lng: 139.106, name: "Хаконэ (рёкан)",      day: "День 2–3",         cat: "trip"  },
-  { lat: 35.262, lng: 138.998, name: "Гора Кинтоки",        day: "День 3 ☀️",        cat: "trip"  },
-  { lat: 35.096, lng: 139.072, name: "Атами",               day: "День 3 ⛅",         cat: "trip"  },
-  { lat: 35.509, lng: 138.754, name: "Фудзи / Кавагутико",  day: "День 2",           cat: "trip"  },
+  { lat: 35.234, lng: 139.106, name: "Хаконэ (рёкан)",      day: "День 3–4",         cat: "trip"  },
+  { lat: 35.262, lng: 138.998, name: "Гора Кинтоки",        day: "День 4 ☀️",        cat: "trip"  },
+  { lat: 35.096, lng: 139.072, name: "Атами",               day: "День 4 ⛅",         cat: "trip"  },
+  { lat: 35.509, lng: 138.754, name: "Фудзи / Кавагутико",  day: "День 3",           cat: "trip"  },
 ];
 
 // Границы для двух режимов карты [юг, запад, север, восток]
