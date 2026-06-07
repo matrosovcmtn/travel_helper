@@ -31,6 +31,7 @@ const SECTIONS = [
       { key: "t_teamlab", text: "teamLab Borderless", sub: "teamlab.art — Адзабудай, 14 июня", urgent: true },
       { key: "t_romance", text: "Romancecar", sub: "odakyu.jp — 9 июня, поезд ~7:50 из Синдзюку", urgent: true },
       { key: "t_ryokan", text: "Рёкан Хаконэ", sub: "Booking.com — ночь 9 июня", urgent: true },
+      { key: "t_daikoku", text: "✅ Дайкоку drive (303 Garage) — куплено", sub: "8 июня 19:00 — старт от гаража в Синдзюку" },
       { key: "t_womb", text: "Клуб WOMB или Zero Tokyo", sub: "Проверить предпродажу на их сайтах — ночь 13 или 14 июня" },
     ],
   },
