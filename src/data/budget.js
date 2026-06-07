@@ -19,7 +19,7 @@ export const BUDGET = {
     { name: "Транспорт по Токио (Suica)", rub: Math.round(500 * 2 * 12 * JPY), note: "~¥500 × 2 × 12 дней" },
     { name: "Daikoku (Uber туда-обратно)", rub: Math.round(8500 * JPY), note: "~¥8,500 обе стороны" },
     { name: "Клуб (вход + напитки, 2 чел.)", rub: Math.round(11000 * JPY), note: "WOMB или Zero Tokyo" },
-    { name: "Музеи / смотровые / прочее", rub: Math.round(12000 * JPY), note: "Нац. музей (Уэно) + Mori Art Museum (~¥2,300×2, смотровая включена)" },
+    { name: "Музеи / смотровые / прочее", rub: Math.round(22000 * JPY), note: "Уэно (TNM+NMWA+Хорюдзи), Нэдзу, Мэйдзи, Асакура, Тэйэн, Mori — на двоих" },
   ],
 };
 
