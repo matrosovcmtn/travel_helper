@@ -5,7 +5,7 @@ const SECTIONS = [
   {
     title: "❗ СРОЧНО — ДО ПОЕЗДКИ", color: T.RED,
     items: [
-      { key: "ryokan", text: "Забронировать рёкан Хаконэ", sub: "Booking.com — до $250, искать Hakone Suimeisou или аналог с rotenburo", urgent: true },
+      { key: "ryokan", text: "Купить Hakone Freepass (2 чел.)", sub: "2-дневный из Синдзюку ~¥6,100/чел — Tozan, канатка, кораблик, автобусы (Romancecar отдельно)", urgent: true },
       { key: "disney", text: "Купить билеты Disneyland", sub: "tokyodisneyresort.jp — продают только онлайн, быстро раскупают", urgent: true },
       { key: "teamlab", text: "Забронировать teamLab Borderless", sub: "teamlab.art — Адзабудай, 14 июня, ~¥4,800/чел (в обуви, не Planets)", urgent: true },
       { key: "romance", text: "Купить Odakyu Romancecar", sub: "odakyu.jp/english — Синдзюку→Хаконэ 9 июня, ¥2,470/чел", urgent: true },
@@ -30,7 +30,7 @@ const SECTIONS = [
       { key: "t_disney", text: "Disneyland", sub: "tokyodisneyresort.jp — 15 июня", urgent: true },
       { key: "t_teamlab", text: "teamLab Borderless", sub: "teamlab.art — Адзабудай, 14 июня", urgent: true },
       { key: "t_romance", text: "Romancecar", sub: "odakyu.jp — 9 июня, поезд ~7:50 из Синдзюку", urgent: true },
-      { key: "t_ryokan", text: "Рёкан Хаконэ", sub: "Booking.com — ночь 9 июня", urgent: true },
+      { key: "t_ryokan", text: "✅ Merveille Hakone Gora", sub: "Гора · ночь 9 июня · заезд 15–18, выезд до 10" },
       { key: "t_daikoku", text: "✅ Дайкоку drive (303 Garage) — куплено", sub: "8 июня 19:00 — старт от гаража в Синдзюку" },
       { key: "t_womb", text: "Клуб WOMB или Zero Tokyo", sub: "Проверить предпродажу на их сайтах — ночь 13 или 14 июня" },
     ],

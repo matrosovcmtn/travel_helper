@@ -34,10 +34,10 @@ export const LOCS = [
   { lat: 35.727, lng: 139.765, name: "Янака + Асакура",     day: "День 10",          cat: "sight" },
   { lat: 35.633, lng: 139.880, name: "Disneyland",          day: "День 9",           cat: "fun"   },
   { lat: 35.454, lng: 139.649, name: "Daikoku PA (303 Garage drive)", day: "Ночь дня 2 · 8.06", cat: "night" },
-  { lat: 35.234, lng: 139.106, name: "Хаконэ (рёкан)",      day: "День 3–4",         cat: "trip"  },
+  { lat: 35.246, lng: 139.052, name: "Хаконэ: Гора (Merveille)", day: "День 3–4",     cat: "trip"  },
+  { lat: 35.244, lng: 139.019, name: "Овакудани (вид на Фудзи)", day: "День 3",       cat: "trip"  },
   { lat: 35.262, lng: 138.998, name: "Гора Кинтоки",        day: "День 4 ☀️",        cat: "trip"  },
-  { lat: 35.096, lng: 139.072, name: "Атами",               day: "День 4 ⛅",         cat: "trip"  },
-  { lat: 35.509, lng: 138.754, name: "Фудзи / Кавагутико",  day: "День 3",           cat: "trip"  },
+  { lat: 35.205, lng: 139.026, name: "Озеро Аси + Хаконэ-дзиндзя", day: "День 4",     cat: "trip"  },
 ];
 
 // Границы для двух режимов карты [юг, запад, север, восток]
