@@ -1,32 +1,66 @@
 export const JPY = 0.48; // 1 JPY = 0,48 ₽
 export const USD = 75;   // 1 USD = 75 ₽
 
-export const BUDGET = {
-  paid: [
-    { name: "Авиабилеты (2 чел.)", rub: 105430, note: "China Southern, оплачено" },
-    { name: "Airbnb Коэндзи (12 ночей)", rub: 62000, note: "Suginami City, 6–18 июня" },
-    { name: "Tinkoff Premium", rub: 3000, note: "Страховка + бизнес-зал включены" },
-  ],
-  upcoming: [
-    { name: "Merveille Hakone Gora (1 ночь)", rub: Math.round(250 * USD), note: "Гора, 5 мин от станции · онсэн + кайсэки" },
-    { name: "Odakyu Romancecar (2 чел.)", rub: Math.round(4940 * JPY), note: "Синдзюку↔Хаконэ-Юмото ¥2,470/чел (доплата) — уже куплена" },
-    { name: "Hakone Freepass (2 чел.)", rub: Math.round(6100 * 2 * JPY), note: "2-дневный из Синдзюку ¥6,100/чел — Tozan, канатка, кораблик, автобусы" },
-    { name: "Disneyland (2 билета)", rub: Math.round(10900 * 2 * JPY), note: "¥10,900 × 2 — tokyodisneyresort.jp" },
-    { name: "teamLab Borderless (2 билета)", rub: Math.round(4800 * 2 * JPY), note: "¥4,800 × 2 (вс, Адзабудай) — teamlab.art" },
-  ],
-  variable: [
-    { name: "Еда (12 дней × 2 чел.)", rub: 40000, note: "Kombini + обеды + ужины" },
-    { name: "Транспорт по Токио (Suica)", rub: Math.round(500 * 2 * 12 * JPY), note: "~¥500 × 2 × 12 дней" },
-    { name: "Daikoku (Uber туда-обратно)", rub: Math.round(8500 * JPY), note: "~¥8,500 обе стороны" },
-    { name: "Клуб (вход + напитки, 2 чел.)", rub: Math.round(11000 * JPY), note: "WOMB или Zero Tokyo" },
-    { name: "Музеи / смотровые / прочее", rub: Math.round(22000 * JPY), note: "Уэно (TNM+NMWA+Хорюдзи), Нэдзу, Мэйдзи, Асакура, Тэйэн, Mori — на двоих" },
-  ],
-};
+// Сводка фактических трат
+export const SUMMARY_DATE = "11 июня 2026";
+export const RATE_NOTE = "Курс: $1 = 75 ₽ · обмен наличных 158¥/$";
 
-export const totalPaid = BUDGET.paid.reduce((s, i) => s + i.rub, 0);
-export const totalUpcoming = BUDGET.upcoming.reduce((s, i) => s + i.rub, 0);
-export const totalVariable = BUDGET.variable.reduce((s, i) => s + i.rub, 0);
-export const grandTotal = totalPaid + totalUpcoming + totalVariable;
+// Уже потрачено — по категориям
+export const SPENT_GROUPS = [
+  {
+    title: "До поездки", color: "#3a9a5a",
+    items: [
+      { name: "Авиабилеты (2 чел., China Southern)", rub: 105430 },
+      { name: "Airbnb Коэндзи (12 ночей)", rub: 62000 },
+      { name: "Тинькофф Премиум (страховка + зал)", rub: 3000 },
+    ],
+  },
+  {
+    title: "Транспорт в Японии", color: "#5566cc",
+    items: [
+      { name: "Хаконэ Фрипасс (2 чел.)", rub: 7100 },
+      { name: "Дайкоку PA (такси GO)", rub: 4000 },
+      { name: "Романскар (Синдзюку → Хаконэ)", rub: 2400 },
+      { name: "Keikyu (Ханеда → Синагава)", rub: 555 },
+    ],
+  },
+  {
+    title: "Жильё в Японии", color: "#c07020",
+    items: [
+      { name: "Рёкан Merveille, 1 ночь", rub: 19250, note: "кайсэки-ужин + завтрак + онсэн" },
+    ],
+  },
+  {
+    title: "Связь", color: "#8844cc",
+    items: [
+      { name: "Airalo eSIM ×3 ($49 + $24 + $4)", rub: 5775 },
+    ],
+  },
+  {
+    title: "Еда и прочее", color: "#cc3322",
+    items: [
+      { name: "Наличными ~45 300¥ — комбини, рестораны, продукты, спортзал", rub: 21500 },
+      { name: "RAKUTENPAY OMUKAI (ресторан)", rub: 1845 },
+      { name: "Village Vanguard Симокитадзава", rub: 1143 },
+      { name: "7-Eleven + FamilyMart", rub: 467 },
+    ],
+  },
+];
+
+// Ещё запланировано (не оплачено)
+export const PLANNED = [
+  { name: "Disneyland (15 июня, 2 чел.)", rub: 11000 },
+  { name: "teamLab Borderless (14 июня, 2 чел.)", rub: 3600 },
+  { name: "Еда + транспорт, оставшиеся 7 дней", rub: 35000, note: "оценка" },
+];
+
+export const CASH_ON_HAND = { yen: 5000, rub: 2370 };
+export const FORECAST_TOTAL = 302000; // оценка итога поездки, без шоппинга
+
+export const totalSpent = SPENT_GROUPS.reduce(
+  (s, g) => s + g.items.reduce((a, i) => a + i.rub, 0), 0
+);
+export const totalPlanned = PLANNED.reduce((s, i) => s + i.rub, 0);
 
 export function fmt(n) {
   return n.toLocaleString("ru-RU") + " ₽";
