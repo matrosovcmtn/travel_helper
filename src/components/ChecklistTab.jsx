@@ -32,7 +32,7 @@ const SECTIONS = [
       { key: "t_romance", text: "Romancecar", sub: "odakyu.jp — 9 июня, поезд ~7:50 из Синдзюку", urgent: true },
       { key: "t_ryokan", text: "✅ Merveille Hakone Gora", sub: "Гора · ночь 9 июня · заезд 15–18, выезд до 10" },
       { key: "t_daikoku", text: "✅ Дайкоку drive (303 Garage) — куплено", sub: "8 июня 19:00 — старт от гаража в Синдзюку" },
-      { key: "t_womb", text: "Клуб WOMB или Zero Tokyo", sub: "Проверить предпродажу на их сайтах — ночь 13 или 14 июня" },
+      { key: "t_enoden", text: "Камакура: Enoden 1-day pass (Noriorikun)", sub: "~¥800 — покупается на месте, на ст. Камакура. 13 июня" },
     ],
   },
   {
