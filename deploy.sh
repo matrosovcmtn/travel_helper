@@ -9,6 +9,7 @@ BRANCH="gh-pages"
 npm run build
 
 cd dist
+rm -rf .git                     # Vite сохраняет .git при очистке dist — убираем, чтобы init был чистым
 touch .nojekyll                 # отключить Jekyll, отдавать файлы как есть
 git init -q
 git checkout -q -b "$BRANCH"
