@@ -49,7 +49,7 @@ export const SPENT_GROUPS = [
 
 // Ещё запланировано (не оплачено)
 export const PLANNED = [
-  { name: "Disneyland (15 июня, 2 чел.)", rub: 11000 },
+  { name: "Disneyland (12 июня, 2 чел.)", rub: 11000 },
   { name: "teamLab Borderless (14 июня, 2 чел.)", rub: 3600 },
   { name: "Еда + транспорт, оставшиеся 7 дней", rub: 35000, note: "оценка" },
 ];
