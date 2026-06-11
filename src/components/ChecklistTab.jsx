@@ -9,7 +9,7 @@ const SECTIONS = [
       { key: "disney", text: "Купить билеты Disneyland на 12 июня (пт)", sub: "tokyodisneyresort.jp — билеты ДАТНЫЕ, конкретно на пятницу; даты раскупают, брать сейчас", urgent: true },
       { key: "teamlab", text: "Забронировать teamLab Borderless", sub: "teamlab.art — Адзабудай, 14 июня, ~¥4,800/чел (в обуви, не Planets)", urgent: true },
       { key: "romance", text: "Купить Odakyu Romancecar", sub: "odakyu.jp/english — Синдзюку→Хаконэ 9 июня, ¥2,470/чел", urgent: true },
-      { key: "cafe", text: "Забронировать тематическое кафе", sub: "Temari no Ouchi (кошки) или Mèow — онлайн, день 6 (12 июня)", urgent: true },
+      { key: "cafe", text: "Забронировать тематическое кафе", sub: "Temari no Ouchi (кошки) или Mèow — онлайн, день 9 (15 июня)", urgent: true },
     ],
   },
   {
@@ -18,7 +18,7 @@ const SECTIONS = [
       { key: "gmaps", text: "Google Maps", sub: "Скачать офлайн-карты: Tokyo, Kanagawa Prefecture" },
       { key: "gtrans", text: "Google Translate", sub: "Скачать офлайн языковой пакет: Японский — нужен для меню и вывесок" },
       { key: "suica", text: "Suica (Apple/Google Wallet)", sub: "Или купить физическую карту на станции Коэндзи в первый день" },
-      { key: "go", text: "GO — такси", sub: "Для Daikoku PA ночью и по городу если нет метро" },
+      { key: "go", text: "GO — такси", sub: "По городу / ночью, если нет прямого метро" },
       { key: "odakyu", text: "Odakyu App", sub: "Для покупки/проверки билетов Romancecar" },
       { key: "navitime", text: "Japan Travel by NAVITIME", sub: "Лучший навигатор по японскому транспорту — маршруты поездов/автобусов" },
       { key: "deepl", text: "DeepL или Yandex Translate", sub: "Резервный переводчик" },
@@ -29,7 +29,7 @@ const SECTIONS = [
     items: [
       { key: "t_disney", text: "Disneyland", sub: "tokyodisneyresort.jp — 12 июня (пт), датный билет", urgent: true },
       { key: "t_teamlab", text: "teamLab Borderless", sub: "teamlab.art — Адзабудай, 14 июня", urgent: true },
-      { key: "t_romance", text: "Romancecar", sub: "odakyu.jp — 9 июня, поезд ~7:50 из Синдзюку", urgent: true },
+      { key: "t_romance", text: "Romancecar", sub: "odakyu.jp — 9 июня, поезд 8:31 из Синдзюку (прибытие 10:18)", urgent: true },
       { key: "t_ryokan", text: "✅ Merveille Hakone Gora", sub: "Гора · ночь 9 июня · заезд 15–18, выезд до 10" },
       { key: "t_daikoku", text: "✅ Дайкоку drive (303 Garage) — куплено", sub: "8 июня 19:00 — старт от гаража в Синдзюку" },
       { key: "t_enoden", text: "Камакура: Enoden 1-day pass (Noriorikun)", sub: "~¥800 — покупается на месте, на ст. Камакура. 13 июня" },
