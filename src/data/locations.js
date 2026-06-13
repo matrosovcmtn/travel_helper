@@ -20,12 +20,12 @@ export const LOCS = [
   { lat: 35.670, lng: 139.703, name: "Харадзюку",           day: "День 9",           cat: "shop"  },
   { lat: 35.665, lng: 139.717, name: "Музей Нэдзу (Кума)",  day: "День 11",          cat: "art"   },
   { lat: 35.658, lng: 139.702, name: "Сибуя",               day: "День 9",           cat: "sight" },
-  { lat: 35.648, lng: 139.703, name: "Дайканьяма",          day: "Опц. (своб.)",     cat: "art"   },
-  { lat: 35.644, lng: 139.699, name: "Накамэгуро",          day: "Опц. (своб.)",     cat: "sight" },
+  { lat: 35.648, lng: 139.703, name: "Дайканьяма",          day: "День 7",           cat: "art"   },
+  { lat: 35.644, lng: 139.699, name: "Накамэгуро",          day: "День 7",           cat: "sight" },
   { lat: 35.638, lng: 139.719, name: "Музей Тэйэн",         day: "Опц. (своб.)",     cat: "art"   },
   { lat: 35.672, lng: 139.765, name: "Гиндза",              day: "Опц. (своб.)",     cat: "shop"  },
-  { lat: 35.659, lng: 139.741, name: "teamLab Borderless",  day: "День 8",           cat: "art"   },
-  { lat: 35.732, lng: 139.750, name: "Кагурадзака",         day: "День 8",           cat: "sight" },
+  { lat: 35.659, lng: 139.741, name: "teamLab Borderless",  day: "День 9 (вечер)",   cat: "art"   },
+  { lat: 35.732, lng: 139.750, name: "Кагурадзака",         day: "Опц. (вечер)",     cat: "sight" },
   { lat: 35.660, lng: 139.729, name: "Роппонги (Mori/NACT)", day: "День 11",         cat: "art"   },
   { lat: 35.660, lng: 139.740, name: "Azabudai Hills",      day: "День 11",          cat: "shop"  },
   { lat: 35.718, lng: 139.776, name: "Уэно: TNM / NMWA / Хорюдзи", day: "День 10",   cat: "art"   },
@@ -36,8 +36,8 @@ export const LOCS = [
   { lat: 35.244, lng: 139.019, name: "Овакудани (вид на Фудзи)", day: "День 3",       cat: "trip"  },
   { lat: 35.262, lng: 138.998, name: "Гора Кинтоки",        day: "День 4 ☀️",        cat: "trip"  },
   { lat: 35.205, lng: 139.026, name: "Озеро Аси + Хаконэ-дзиндзя", day: "День 4",     cat: "trip"  },
-  { lat: 35.317, lng: 139.536, name: "Камакура (Большой Будда)", day: "День 7",       cat: "trip"  },
-  { lat: 35.299, lng: 139.480, name: "Эносима",            day: "День 7",           cat: "trip"  },
+  { lat: 35.317, lng: 139.536, name: "Камакура (Большой Будда)", day: "День 8",       cat: "trip"  },
+  { lat: 35.299, lng: 139.480, name: "Эносима",            day: "День 8",           cat: "trip"  },
 ];
 
 // Границы для двух режимов карты [юг, запад, север, восток]

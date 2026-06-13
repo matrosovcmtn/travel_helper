@@ -19,7 +19,7 @@ export const SPENT_GROUPS = [
     title: "Транспорт в Японии", color: "#5566cc",
     items: [
       { name: "Хаконэ Фрипасс (2 чел.)", rub: 7100 },
-      { name: "Дайкоку PA (такси GO)", rub: 4000 },
+      { name: "Дайкоку: драйв с 303 Garage", rub: 4000 },
       { name: "Романскар (Синдзюку → Хаконэ)", rub: 2400 },
       { name: "Keikyu (Ханеда → Синагава)", rub: 555 },
     ],
@@ -50,7 +50,7 @@ export const SPENT_GROUPS = [
 // Ещё запланировано (не оплачено)
 export const PLANNED = [
   { name: "Disneyland (12 июня, 2 чел.)", rub: 11000 },
-  { name: "teamLab Borderless (14 июня, 2 чел.)", rub: 3600 },
+  { name: "teamLab Borderless (15 июня, 2 чел.)", rub: 3600 },
   { name: "Еда + транспорт, оставшиеся 7 дней", rub: 35000, note: "оценка" },
 ];
 
