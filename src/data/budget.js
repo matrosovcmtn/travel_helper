@@ -2,8 +2,8 @@ export const JPY = 0.48; // 1 JPY = 0,48 ₽
 export const USD = 75;   // 1 USD = 75 ₽
 
 // Сводка фактических трат
-export const SUMMARY_DATE = "11 июня 2026";
-export const RATE_NOTE = "Курс: $1 = 75 ₽ · обмен наличных 158¥/$";
+export const SUMMARY_DATE = "13 июня 2026";
+export const RATE_NOTE = "Курс: $1 = 75 ₽ · последний обмен $200 → 31 360¥ (156,8¥/$)";
 
 // Уже потрачено — по категориям
 export const SPENT_GROUPS = [
@@ -37,9 +37,18 @@ export const SPENT_GROUPS = [
     ],
   },
   {
+    title: "Развлечения", color: "#aa4488",
+    items: [
+      { name: "Disneyland — билеты (2 чел.)", rub: 8826, note: "$117,68" },
+      { name: "Disneyland — фасттреки (Premier Access)", rub: 4713, note: "$62,84 · «5к на фасттреки»" },
+      { name: "Disneyland — еда / мерч в парке", rub: 1532, note: "$20,43" },
+    ],
+  },
+  {
     title: "Еда и прочее", color: "#cc3322",
     items: [
       { name: "Наличными ~45 300¥ — комбини, рестораны, продукты, спортзал", rub: 21500 },
+      { name: "Карта 12–13 июня — конбини, Старбакс, аптека, Хамарикю", rub: 3994, note: "$53,25" },
       { name: "RAKUTENPAY OMUKAI (ресторан)", rub: 1845 },
       { name: "Village Vanguard Симокитадзава", rub: 1143 },
       { name: "7-Eleven + FamilyMart", rub: 467 },
@@ -49,12 +58,11 @@ export const SPENT_GROUPS = [
 
 // Ещё запланировано (не оплачено)
 export const PLANNED = [
-  { name: "Disneyland (12 июня, 2 чел.)", rub: 11000 },
   { name: "teamLab Borderless (15 июня, 2 чел.)", rub: 3600 },
-  { name: "Еда + транспорт, оставшиеся 7 дней", rub: 35000, note: "оценка" },
+  { name: "Еда + транспорт, оставшиеся ~5 дней", rub: 25000, note: "оценка" },
 ];
 
-export const CASH_ON_HAND = { yen: 5000, rub: 2370 };
+export const CASH_ON_HAND = { yen: 42000, rub: 20100 };
 export const FORECAST_TOTAL = 302000; // оценка итога поездки, без шоппинга
 
 export const totalSpent = SPENT_GROUPS.reduce(
