@@ -3,7 +3,7 @@ export const USD = 75;   // 1 USD = 75 ₽
 
 // Сводка фактических трат
 export const SUMMARY_DATE = "13 июня 2026";
-export const RATE_NOTE = "Курс: $1 = 75 ₽ · последний обмен $200 → 31 360¥ (156,8¥/$)";
+export const RATE_NOTE = "Курс: $1 = 75 ₽ · наличные: $800 обмен + 30 000¥ с карты = 155 400¥, на руках 42 000¥";
 
 // Уже потрачено — по категориям
 export const SPENT_GROUPS = [
@@ -47,7 +47,7 @@ export const SPENT_GROUPS = [
   {
     title: "Еда и прочее", color: "#cc3322",
     items: [
-      { name: "Наличными ~45 300¥ — комбини, рестораны, продукты, спортзал", rub: 21500 },
+      { name: "Наличными ~113 400¥ — комбини, рестораны, продукты, спортзал, онсэн", rub: 54270 },
       { name: "Карта 12–13 июня — конбини, Старбакс, аптека, Хамарикю", rub: 3994, note: "$53,25" },
       { name: "RAKUTENPAY OMUKAI (ресторан)", rub: 1845 },
       { name: "Village Vanguard Симокитадзава", rub: 1143 },
@@ -63,7 +63,7 @@ export const PLANNED = [
 ];
 
 export const CASH_ON_HAND = { yen: 42000, rub: 20100 };
-export const FORECAST_TOTAL = 302000; // оценка итога поездки, без шоппинга
+export const FORECAST_TOTAL = 318000; // оценка итога поездки, без шоппинга (поднята: налички ушло больше)
 
 export const totalSpent = SPENT_GROUPS.reduce(
   (s, g) => s + g.items.reduce((a, i) => a + i.rub, 0), 0
