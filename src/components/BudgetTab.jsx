@@ -59,7 +59,7 @@ export default function BudgetTab() {
       <div style={{ padding: "14px 16px", background: "#fffdf5", borderRadius: 12, border: "1px solid #e8e0c0" }}>
         <div style={{ fontSize: 10, letterSpacing: 2.5, fontWeight: 700, color: "#aa8822", marginBottom: 8 }}>💡 ЗАМЕТКИ</div>
         <div style={{ fontSize: 12.5, color: T.MUTED, lineHeight: 1.7 }}>
-          <b style={{ color: T.TEXT }}>Шоппинг</b> в прогноз не включён<br />
+          <b style={{ color: T.TEXT }}>Шоппинг</b> учитывается по факту (далее не прогнозируем)<br />
           <b style={{ color: T.TEXT }}>Прогноз {fmt(FORECAST_TOTAL)}</b> заложен с запасом сверх перечисленных позиций (потрачено + план ≈ {fmt(totalSpent + totalPlanned)})
         </div>
       </div>

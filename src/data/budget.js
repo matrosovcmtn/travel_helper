@@ -2,7 +2,7 @@ export const JPY = 0.48; // 1 JPY = 0,48 ₽
 export const USD = 75;   // 1 USD = 75 ₽
 
 // Сводка фактических трат
-export const SUMMARY_DATE = "13 июня 2026";
+export const SUMMARY_DATE = "14 июня 2026";
 export const RATE_NOTE = "Курс: $1 = 75 ₽ · наличные: $800 обмен + 30 000¥ с карты = 155 400¥, на руках 42 000¥";
 
 // Уже потрачено — по категориям
@@ -47,11 +47,17 @@ export const SPENT_GROUPS = [
   {
     title: "Еда и прочее", color: "#cc3322",
     items: [
-      { name: "Наличными ~113 400¥ — комбини, рестораны, продукты, спортзал, онсэн", rub: 54270 },
+      { name: "Наличными ~115 000¥ — комбини, рестораны, продукты, спортзал, онсэн", rub: 55035 },
       { name: "Карта 12–13 июня — конбини, Старбакс, аптека, Хамарикю", rub: 3994, note: "$53,25" },
       { name: "RAKUTENPAY OMUKAI (ресторан)", rub: 1845 },
       { name: "Village Vanguard Симокитадзава", rub: 1143 },
       { name: "7-Eleven + FamilyMart", rub: 467 },
+    ],
+  },
+  {
+    title: "Шоппинг", color: "#d07020",
+    items: [
+      { name: "Маша — одежда (Гинза), наличными", rub: 6985, note: "14 600¥" },
     ],
   },
 ];
@@ -62,8 +68,8 @@ export const PLANNED = [
   { name: "Еда + транспорт, оставшиеся ~5 дней", rub: 25000, note: "оценка" },
 ];
 
-export const CASH_ON_HAND = { yen: 42000, rub: 20100 };
-export const FORECAST_TOTAL = 318000; // оценка итога поездки, без шоппинга (поднята: налички ушло больше)
+export const CASH_ON_HAND = { yen: 25800, rub: 12340 };
+export const FORECAST_TOTAL = 325000; // оценка итога поездки (шоппинг учитывается по факту)
 
 export const totalSpent = SPENT_GROUPS.reduce(
   (s, g) => s + g.items.reduce((a, i) => a + i.rub, 0), 0
