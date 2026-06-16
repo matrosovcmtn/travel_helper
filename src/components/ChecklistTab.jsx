@@ -7,7 +7,7 @@ const SECTIONS = [
     items: [
       { key: "ryokan", text: "Купить Hakone Freepass (2 чел.)", sub: "2-дневный из Синдзюку ~¥6,100/чел — Tozan, канатка, кораблик, автобусы (Romancecar отдельно)", urgent: true },
       { key: "disney", text: "Купить билеты Disneyland на 12 июня (пт)", sub: "tokyodisneyresort.jp — билеты ДАТНЫЕ, конкретно на пятницу; даты раскупают, брать сейчас", urgent: true },
-      { key: "teamlab", text: "Забронировать teamLab Borderless", sub: "teamlab.art — Адзабудай, 15 июня (пн, вечерний слот), ~¥3,800/чел будни (в обуви, не Planets)", urgent: true },
+      { key: "teamlab", text: "Перебронировать teamLab Borderless", sub: "teamlab.art — Адзабудай, 17 июня (ср): пропал в пн (болезнь), во вт закрыт. Слот на среду!", urgent: true },
       { key: "romance", text: "Купить Odakyu Romancecar", sub: "odakyu.jp/english — Синдзюку→Хаконэ 9 июня, ¥2,470/чел", urgent: true },
       { key: "cafe", text: "Забронировать тематическое кафе", sub: "Temari no Ouchi (кошки) или Mèow — онлайн, день 9 (15 июня)", urgent: true },
     ],
@@ -28,7 +28,7 @@ const SECTIONS = [
     title: "🎫 БИЛЕТЫ И БРОНИРОВАНИЯ", color: "#3a9a5a",
     items: [
       { key: "t_disney", text: "Disneyland", sub: "tokyodisneyresort.jp — 12 июня (пт), датный билет", urgent: true },
-      { key: "t_teamlab", text: "teamLab Borderless", sub: "teamlab.art — Адзабудай, 15 июня (пн, вечер)", urgent: true },
+      { key: "t_teamlab", text: "teamLab Borderless", sub: "teamlab.art — Адзабудай, 17 июня (ср)", urgent: true },
       { key: "t_romance", text: "Romancecar", sub: "odakyu.jp — 9 июня, поезд 8:31 из Синдзюку (прибытие 10:18)", urgent: true },
       { key: "t_ryokan", text: "✅ Merveille Hakone Gora", sub: "Гора · ночь 9 июня · заезд 15–18, выезд до 10" },
       { key: "t_daikoku", text: "✅ Дайкоку drive (303 Garage) — куплено", sub: "8 июня 19:00 — старт от гаража в Синдзюку" },
