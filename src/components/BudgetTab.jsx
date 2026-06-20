@@ -62,7 +62,6 @@ export default function BudgetTab() {
         <div style={{ fontSize: 10, letterSpacing: 2.5, fontWeight: 700, color: "#aa8822", marginBottom: 8 }}>💡 ЗАМЕТКИ</div>
         <div style={{ fontSize: 12.5, color: T.MUTED, lineHeight: 1.7 }}>
           <b style={{ color: T.TEXT }}>Поездка завершена</b> — все суммы по факту<br />
-          Не в счёт: роутер (20 000¥), чемодан (10 000¥), подписка<br />
           «Пересадка (Гуанчжоу)» — уже не Япония, но в общий итог входит
         </div>
       </div>
