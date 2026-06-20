@@ -1,11 +1,11 @@
 export const JPY = 0.48; // 1 JPY = 0,48 ₽
 export const USD = 75;   // 1 USD = 75 ₽
 
-// Сводка фактических трат
-export const SUMMARY_DATE = "14 июня 2026";
-export const RATE_NOTE = "Курс: $1 = 75 ₽ · наличные: $800 обмен + 30 000¥ с карты = 155 400¥, на руках 42 000¥";
+// Итоговая сводка по поездке
+export const SUMMARY_DATE = "18 июня 2026 · ИТОГ";
+export const RATE_NOTE = "Курс: $1 = 75 ₽ · наличные: $900 обмен + 10 000¥ с карты — потрачено всё. Не в счёт: роутер 20 000¥, чемодан 10 000¥, подписка.";
 
-// Уже потрачено — по категориям
+// Потрачено — по категориям (всё по факту)
 export const SPENT_GROUPS = [
   {
     title: "До поездки", color: "#3a9a5a",
@@ -40,41 +40,44 @@ export const SPENT_GROUPS = [
     title: "Развлечения", color: "#aa4488",
     items: [
       { name: "Disneyland — билеты (2 чел.)", rub: 8826, note: "$117,68" },
-      { name: "Disneyland — фасттреки (Premier Access)", rub: 4713, note: "$62,84 · «5к на фасттреки»" },
+      { name: "Disneyland — фасттреки (Premier Access)", rub: 4713, note: "$62,84" },
       { name: "Disneyland — еда / мерч в парке", rub: 1532, note: "$20,43" },
+      { name: "teamLab Borderless (2 чел.)", rub: 3767, note: "$50,23" },
     ],
   },
   {
     title: "Еда и прочее", color: "#cc3322",
     items: [
-      { name: "Наличными ~115 000¥ — комбини, рестораны, продукты, спортзал, онсэн", rub: 55035 },
-      { name: "Карта 12–13 июня — конбини, Старбакс, аптека, Хамарикю", rub: 3994, note: "$53,25" },
-      { name: "RAKUTENPAY OMUKAI (ресторан)", rub: 1845 },
-      { name: "Village Vanguard Симокитадзава", rub: 1143 },
-      { name: "7-Eleven + FamilyMart", rub: 467 },
+      { name: "Наличными ~136 500¥ — рестораны, конбини, продукты, спортзал, онсэн", rub: 65290 },
+      { name: "Карта — рестораны / конбини / кафе / аптека (вся поездка)", rub: 30941, note: "$~412 · вкл. Taito-ku $66 (?)" },
     ],
   },
   {
     title: "Шоппинг", color: "#d07020",
     items: [
       { name: "Маша — одежда (Гинза), наличными", rub: 6985, note: "14 600¥" },
+      { name: "По карте — Uniqlo, Don Quijote ×2, ABC-Mart", rub: 19127, note: "$255" },
+    ],
+  },
+  {
+    title: "Пересадка (Гуанчжоу)", color: "#8a8a9a",
+    items: [
+      { name: "Отель Lemeian + 7-Eleven (не Япония)", rub: 3659, note: "$48,79" },
     ],
   },
 ];
 
-// Ещё запланировано (не оплачено)
-export const PLANNED = [
-  { name: "teamLab Borderless (17 июня, 2 чел.)", rub: 3600 },
-  { name: "Еда + транспорт, оставшиеся ~5 дней", rub: 25000, note: "оценка" },
-];
+// Поездка завершена — планов больше нет
+export const PLANNED = [];
 
-export const CASH_ON_HAND = { yen: 25800, rub: 12340 };
-export const FORECAST_TOTAL = 325000; // оценка итога поездки (шоппинг учитывается по факту)
+export const CASH_ON_HAND = { yen: 0, rub: 0 };
 
 export const totalSpent = SPENT_GROUPS.reduce(
   (s, g) => s + g.items.reduce((a, i) => a + i.rub, 0), 0
 );
 export const totalPlanned = PLANNED.reduce((s, i) => s + i.rub, 0);
+
+export const FORECAST_TOTAL = totalSpent; // итог по факту
 
 export function fmt(n) {
   return n.toLocaleString("ru-RU") + " ₽";
