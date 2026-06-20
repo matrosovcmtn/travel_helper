@@ -32,7 +32,7 @@ export default function App() {
         <div style={{ maxWidth: 680, margin: "0 auto" }}>
           <div style={{ fontSize: 10, letterSpacing: 5, color: T.RED, fontWeight: 700, marginBottom: 8 }}>ТОКИО · ЯПОНИЯ · 2026</div>
           <h1 style={{ margin: 0, fontSize: 30, fontWeight: 800, letterSpacing: -0.5, color: T.TEXT }}>Маршрут поездки</h1>
-          <div style={{ marginTop: 5, color: T.MUTED, fontSize: 13 }}>Даниил + Мария · 6–18 июня · 12 ночей · Коэндзи</div>
+          <div style={{ marginTop: 5, color: T.MUTED, fontSize: 13 }}>2 человека · 6–18 июня · 12 ночей · Коэндзи</div>
           <div style={{ marginTop: 14, display: "flex", gap: 6, flexWrap: "wrap" }}>
             {["Фудзи + Хаконэ (9–10)", "Daikoku ночью", "Disneyland", "teamLab", "Камакура + море", "Янака", "Кагурадзака"].map((t) => (
               <span key={t} style={{ fontSize: 11, padding: "3px 10px", borderRadius: 20, background: T.CHIP, border: `1px solid ${T.BORDER}`, color: "#666" }}>{t}</span>
