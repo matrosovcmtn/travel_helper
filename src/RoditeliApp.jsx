@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { DAYS } from "./data/roditeli/days.js";
-import { SECTIONS as CHECKLIST_SECTIONS } from "./data/roditeli/checklist.js";
 import { CAT, LOCS, BOUNDS } from "./data/roditeli/locations.js";
 import { T } from "./theme.js";
 import PlanTab from "./components/PlanTab.jsx";
 import MapTab from "./components/MapTab.jsx";
-import ChecklistTab from "./components/ChecklistTab.jsx";
 import VisaTab from "./components/roditeli/VisaTab.jsx";
 import FlightsTab from "./components/roditeli/FlightsTab.jsx";
 import BudgetTab from "./components/roditeli/BudgetTab.jsx";
@@ -13,11 +11,10 @@ import NotesTab from "./components/roditeli/NotesTab.jsx";
 
 const TABS = [
   ["plan", "📅 Маршрут"],
-  ["visa", "🛂 Виза и документы"],
+  ["visa", "🛂 Виза"],
   ["flights", "✈️ Билеты"],
   ["budget", "💰 Бюджет"],
   ["map", "🗺️ Карта"],
-  ["check", "✅ Чеклист"],
   ["notes", "📝 Заметки"],
 ];
 
@@ -86,13 +83,6 @@ export default function RoditeliApp({ onBack }) {
         {tab === "flights" && <FlightsTab />}
         {tab === "budget" && <BudgetTab />}
         {tab === "map" && <MapTab locations={LOCS} categories={CAT} bounds={BOUNDS} views={MAP_VIEWS} defaultView="kansai" />}
-        {tab === "check" && (
-          <ChecklistTab
-            sections={CHECKLIST_SECTIONS}
-            storageKey="travel_helper_checklist_roditeli"
-            footnote="💡 Российские карты Visa/Mastercard/МИР в Японии не работают — только наличные или UnionPay. Планируйте наличные на всю поездку заранее."
-          />
-        )}
         {tab === "notes" && <NotesTab />}
       </div>
     </div>
