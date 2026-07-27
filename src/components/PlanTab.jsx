@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { DAYS, EXTRAS } from "../data/days.js";
 import { T } from "../theme.js";
 
-export default function PlanTab({ expanded, setExpanded }) {
+export default function PlanTab({ days, extras = [], expanded, setExpanded }) {
   const [rain, setRain] = useState({});
   const [showExtras, setShowExtras] = useState(false);
 
@@ -14,7 +13,7 @@ export default function PlanTab({ expanded, setExpanded }) {
 
   return (
     <>
-      {DAYS.map((day, i) => {
+      {days.map((day, i) => {
         const isOpen = !!expanded[i];
         const isRain = !!rain[i];
         const items = isRain && day.rainItems ? day.rainItems : day.items;
@@ -85,33 +84,35 @@ export default function PlanTab({ expanded, setExpanded }) {
       })}
 
       {/* Extras */}
-      <div style={{ marginTop: 8, borderRadius: 12, border: `1px solid ${T.BORDER}`, background: T.CARD, overflow: "hidden" }}>
-        <button
-          onClick={() => setShowExtras((p) => !p)}
-          style={{ width: "100%", background: "none", border: "none", cursor: "pointer", padding: "14px 16px", display: "flex", alignItems: "center", gap: 12, textAlign: "left", color: T.TEXT }}
-        >
-          <span style={{ fontSize: 20 }}>✨</span>
-          <div style={{ flex: 1 }}>
-            <div style={{ fontSize: 9.5, fontWeight: 700, letterSpacing: 2.5, color: "#aa8833", marginBottom: 2 }}>БОНУС</div>
-            <div style={{ fontSize: 15, fontWeight: 600 }}>Ещё интересные места</div>
-          </div>
-          <span style={{ color: "#ccc", fontSize: 14, transform: showExtras ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>▾</span>
-        </button>
-        {showExtras && (
-          <div style={{ borderTop: `1px solid ${T.BORDER}`, padding: "14px 15px" }}>
-            <div style={{ fontSize: 12, color: T.MUTED, marginBottom: 12 }}>Не вошли в основной план — но стоят внимания, если будет свободное время</div>
-            {EXTRAS.map((e, i) => (
-              <div key={i} style={{ display: "flex", gap: 12, marginBottom: 12, alignItems: "flex-start" }}>
-                <span style={{ fontSize: 18, minWidth: 24 }}>{e.icon}</span>
-                <div>
-                  <div style={{ fontSize: 13.5, fontWeight: 600, color: T.TEXT }}>{e.name}</div>
-                  <div style={{ fontSize: 12, color: T.MUTED, marginTop: 2, lineHeight: 1.4 }}>{e.desc}</div>
+      {extras.length > 0 && (
+        <div style={{ marginTop: 8, borderRadius: 12, border: `1px solid ${T.BORDER}`, background: T.CARD, overflow: "hidden" }}>
+          <button
+            onClick={() => setShowExtras((p) => !p)}
+            style={{ width: "100%", background: "none", border: "none", cursor: "pointer", padding: "14px 16px", display: "flex", alignItems: "center", gap: 12, textAlign: "left", color: T.TEXT }}
+          >
+            <span style={{ fontSize: 20 }}>✨</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: 9.5, fontWeight: 700, letterSpacing: 2.5, color: "#aa8833", marginBottom: 2 }}>БОНУС</div>
+              <div style={{ fontSize: 15, fontWeight: 600 }}>Ещё интересные места</div>
+            </div>
+            <span style={{ color: "#ccc", fontSize: 14, transform: showExtras ? "rotate(180deg)" : "none", transition: "transform 0.2s" }}>▾</span>
+          </button>
+          {showExtras && (
+            <div style={{ borderTop: `1px solid ${T.BORDER}`, padding: "14px 15px" }}>
+              <div style={{ fontSize: 12, color: T.MUTED, marginBottom: 12 }}>Не вошли в основной план — но стоят внимания, если будет свободное время</div>
+              {extras.map((e, i) => (
+                <div key={i} style={{ display: "flex", gap: 12, marginBottom: 12, alignItems: "flex-start" }}>
+                  <span style={{ fontSize: 18, minWidth: 24 }}>{e.icon}</span>
+                  <div>
+                    <div style={{ fontSize: 13.5, fontWeight: 600, color: T.TEXT }}>{e.name}</div>
+                    <div style={{ fontSize: 12, color: T.MUTED, marginTop: 2, lineHeight: 1.4 }}>{e.desc}</div>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
     </>
   );
 }

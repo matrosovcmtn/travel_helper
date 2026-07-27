@@ -1,6 +1,5 @@
 import { useState, useMemo, useEffect } from "react";
 import { MapContainer, TileLayer, CircleMarker, Tooltip, Popup, useMap } from "react-leaflet";
-import { CAT, LOCS, BOUNDS } from "../data/locations.js";
 import { T } from "../theme.js";
 
 // Плавно подгоняет видимую область под выбранный режим
@@ -12,22 +11,22 @@ function FitBounds({ bounds }) {
   return null;
 }
 
-export default function MapTab() {
-  const [view, setView] = useState("tokyo");
+export default function MapTab({ locations, categories, bounds, views, defaultView }) {
+  const [view, setView] = useState(defaultView || views[0][0]);
 
-  // В режиме "Токио" показываем только точки внутри городской рамки
+  // В "узком" режиме показываем только точки внутри его рамки
   const visible = useMemo(() => {
-    if (view === "all") return LOCS;
-    const [[s, w], [n, e]] = BOUNDS.tokyo;
-    return LOCS.filter((l) => l.lat >= s && l.lat <= n && l.lng >= w && l.lng <= e);
-  }, [view]);
+    if (view === "all") return locations;
+    const [[s, w], [n, e]] = bounds[view];
+    return locations.filter((l) => l.lat >= s && l.lat <= n && l.lng >= w && l.lng <= e);
+  }, [view, locations, bounds]);
 
   const cats = useMemo(() => [...new Set(visible.map((m) => m.cat))], [visible]);
 
   return (
     <div>
-      <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
-        {[["tokyo", "🗼 Токио"], ["all", "🗾 Вся поездка"]].map(([k, l]) => (
+      <div style={{ display: "flex", gap: 8, marginBottom: 12, flexWrap: "wrap" }}>
+        {views.map(([k, l]) => (
           <button
             key={k}
             onClick={() => setView(k)}
@@ -44,7 +43,7 @@ export default function MapTab() {
 
       <div style={{ borderRadius: 12, overflow: "hidden", border: `1px solid ${T.BORDER}` }}>
         <MapContainer
-          bounds={BOUNDS.tokyo}
+          bounds={bounds[defaultView || views[0][0]]}
           boundsOptions={{ padding: [40, 40] }}
           scrollWheelZoom
           style={{ width: "100%", height: 460 }}
@@ -53,9 +52,9 @@ export default function MapTab() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <FitBounds bounds={BOUNDS[view]} />
+          <FitBounds bounds={bounds[view]} />
           {visible.map((m, i) => {
-            const color = CAT[m.cat]?.color || "#888";
+            const color = categories[m.cat]?.color || "#888";
             return (
               <CircleMarker
                 key={m.name + i}
@@ -72,7 +71,7 @@ export default function MapTab() {
                     <div style={{ fontSize: 12, color: T.MUTED, marginTop: 2 }}>{m.day}</div>
                     <div style={{ display: "inline-flex", alignItems: "center", gap: 5, marginTop: 6, fontSize: 11, color: "#555" }}>
                       <span style={{ width: 8, height: 8, borderRadius: "50%", background: color }} />
-                      {CAT[m.cat]?.label || m.cat}
+                      {categories[m.cat]?.label || m.cat}
                     </div>
                   </div>
                 </Popup>
@@ -89,8 +88,8 @@ export default function MapTab() {
       <div style={{ marginTop: 12, display: "flex", flexWrap: "wrap", gap: 10 }}>
         {cats.map((c) => (
           <div key={c} style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 11.5, color: "#555" }}>
-            <div style={{ width: 9, height: 9, borderRadius: "50%", background: CAT[c]?.color || "#888" }} />
-            {CAT[c]?.label || c}
+            <div style={{ width: 9, height: 9, borderRadius: "50%", background: categories[c]?.color || "#888" }} />
+            {categories[c]?.label || c}
           </div>
         ))}
       </div>
@@ -106,7 +105,7 @@ export default function MapTab() {
               background: "#fff", border: `1px solid ${T.BORDER}`, fontSize: 12,
             }}
           >
-            <div style={{ width: 8, height: 8, borderRadius: "50%", background: CAT[loc.cat]?.color || "#888", flexShrink: 0 }} />
+            <div style={{ width: 8, height: 8, borderRadius: "50%", background: categories[loc.cat]?.color || "#888", flexShrink: 0 }} />
             <b style={{ color: T.TEXT }}>{loc.name}</b>
             <span style={{ color: T.MUTED }}>{loc.day}</span>
           </div>
