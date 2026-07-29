@@ -7,6 +7,7 @@ import MapTab from "./components/MapTab.jsx";
 import VisaTab from "./components/roditeli/VisaTab.jsx";
 import FlightsTab from "./components/roditeli/FlightsTab.jsx";
 import BudgetTab from "./components/roditeli/BudgetTab.jsx";
+import ScheduleOfStayTab from "./components/roditeli/ScheduleOfStayTab.jsx";
 import NotesTab from "./components/roditeli/NotesTab.jsx";
 
 const TABS = [
@@ -15,6 +16,7 @@ const TABS = [
   ["flights", "✈️ Билеты"],
   ["budget", "💰 Бюджет"],
   ["map", "🗺️ Карта"],
+  ["schedule", "🗓️ План путешествия родителей"],
   ["notes", "📝 Заметки"],
 ];
 
@@ -83,6 +85,7 @@ export default function RoditeliApp({ onBack }) {
         {tab === "flights" && <FlightsTab />}
         {tab === "budget" && <BudgetTab />}
         {tab === "map" && <MapTab locations={LOCS} categories={CAT} bounds={BOUNDS} views={MAP_VIEWS} defaultView="kansai" />}
+        {tab === "schedule" && <ScheduleOfStayTab />}
         {tab === "notes" && <NotesTab />}
       </div>
     </div>
