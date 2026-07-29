@@ -47,7 +47,7 @@ export default function RoditeliApp({ onBack }) {
           <h1 style={{ margin: 0, fontSize: 30, fontWeight: 800, letterSpacing: -0.5, color: T.TEXT }}>Маршрут поездки</h1>
           <div style={{ marginTop: 5, color: T.MUTED, fontSize: 13 }}>10–23 сентября · 10 ночей в Японии (+2 транзит в Пекине) · Осака → Нара → Киото → Токио → Хаконэ</div>
           <div style={{ marginTop: 14, display: "flex", gap: 6, flexWrap: "wrap" }}>
-            {["Виза РФ", "Через Гуанчжоу", "Рёкан с онсэном", "Синкансэн", "Бюджетно-средне"].map((t) => (
+            {["Виза РФ", "Через Пекин", "Рёкан с онсэном", "Синкансэн", "Бюджетно-средне"].map((t) => (
               <span key={t} style={{ fontSize: 11, padding: "3px 10px", borderRadius: 20, background: T.CHIP, border: `1px solid ${T.BORDER}`, color: "#666" }}>{t}</span>
             ))}
           </div>
