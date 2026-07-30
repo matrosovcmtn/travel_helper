@@ -12,3 +12,10 @@ export function buildRouteUrl(points, mode = "transit") {
   if (waypoints) params.set("waypoints", waypoints);
   return `https://www.google.com/maps/dir/?${params.toString()}`;
 }
+
+// Ссылка на одну точку в Google Maps (пин с поиском по координатам)
+export function buildPinUrl(loc) {
+  if (!loc) return null;
+  const params = new URLSearchParams({ api: "1", query: `${loc.lat},${loc.lng}` });
+  return `https://www.google.com/maps/search/?${params.toString()}`;
+}

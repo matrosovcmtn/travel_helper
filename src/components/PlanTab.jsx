@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { T } from "../theme.js";
-import { buildRouteUrl } from "../lib/googleMapsRoute.js";
+import { buildRouteUrl, buildPinUrl } from "../lib/googleMapsRoute.js";
+
+const linkStyle = (color) => ({
+  display: "inline-flex", alignItems: "center", gap: 4,
+  padding: "3px 9px", borderRadius: 14,
+  background: "#fff", border: `1px solid ${T.BORDER}`,
+  fontSize: 10.5, fontWeight: 600, color, textDecoration: "none", whiteSpace: "nowrap",
+});
 
 export default function PlanTab({ days, extras = [], expanded, setExpanded }) {
   const [rain, setRain] = useState({});
@@ -64,15 +71,38 @@ export default function PlanTab({ days, extras = [], expanded, setExpanded }) {
             </button>
             {isOpen && (
               <div style={{ borderTop: `1px solid ${isRain ? "#c8d0f0" : T.BORDER}`, padding: "14px 15px" }}>
-                {items.map((item, j) => (
-                  <div key={j} style={{ display: "flex", gap: 10, marginBottom: 11, alignItems: "flex-start" }}>
-                    <div style={{ minWidth: 62, fontSize: 10, color: T.MUTED, fontWeight: 600, paddingTop: 3, flexShrink: 0 }}>{item.time || ""}</div>
-                    <div style={{ flex: 1 }}>
-                      <div style={{ fontSize: 13.5, color: T.TEXT, lineHeight: 1.45 }}>{item.text}</div>
-                      {item.sub && <div style={{ fontSize: 11.5, color: "#aaa8c0", marginTop: 3, lineHeight: 1.4 }}>{item.sub}</div>}
+                {items.map((item, j) => {
+                  let prevLoc = day.startLoc || null;
+                  for (let k = j - 1; k >= 0; k--) {
+                    if (items[k].loc) { prevLoc = items[k].loc; break; }
+                  }
+                  return (
+                    <div key={j} style={{ display: "flex", gap: 10, marginBottom: 11, alignItems: "flex-start" }}>
+                      <div style={{ minWidth: 62, fontSize: 10, color: T.MUTED, fontWeight: 600, paddingTop: 3, flexShrink: 0 }}>{item.time || ""}</div>
+                      <div style={{ flex: 1 }}>
+                        <div style={{ fontSize: 13.5, color: T.TEXT, lineHeight: 1.45 }}>{item.text}</div>
+                        {item.sub && <div style={{ fontSize: 11.5, color: "#aaa8c0", marginTop: 3, lineHeight: 1.4 }}>{item.sub}</div>}
+                        {item.loc && (
+                          <div style={{ display: "flex", gap: 6, marginTop: 6, flexWrap: "wrap" }}>
+                            <a href={buildPinUrl(item.loc)} target="_blank" rel="noopener noreferrer" style={linkStyle("#2a7cc0")}>
+                              📍 Точка на карте
+                            </a>
+                            {prevLoc && (
+                              <a
+                                href={buildRouteUrl([prevLoc, item.loc], item.legMode || "transit")}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={linkStyle("#3a9a5a")}
+                              >
+                                🚃 Как добраться сюда
+                              </a>
+                            )}
+                          </div>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
                 {day.route && day.route.length >= 2 && (
                   <a
                     href={buildRouteUrl(day.route, day.routeMode)}
@@ -86,7 +116,7 @@ export default function PlanTab({ days, extras = [], expanded, setExpanded }) {
                       fontSize: 12, fontWeight: 600, color: "#2a7cc0", textDecoration: "none",
                     }}
                   >
-                    🗺️ Маршрут дня в Google Maps
+                    🗺️ Весь день одним взглядом (Google Maps)
                   </a>
                 )}
                 {note && (
