@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { T } from "../theme.js";
+import { buildRouteUrl } from "../lib/googleMapsRoute.js";
 
 export default function PlanTab({ days, extras = [], expanded, setExpanded }) {
   const [rain, setRain] = useState({});
@@ -72,6 +73,22 @@ export default function PlanTab({ days, extras = [], expanded, setExpanded }) {
                     </div>
                   </div>
                 ))}
+                {day.route && day.route.length >= 2 && (
+                  <a
+                    href={buildRouteUrl(day.route, day.routeMode)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-flex", alignItems: "center", gap: 6,
+                      marginTop: 2, marginBottom: note ? 12 : 0,
+                      padding: "7px 12px", borderRadius: 20,
+                      background: T.CHIP, border: `1px solid ${T.BORDER}`,
+                      fontSize: 12, fontWeight: 600, color: "#2a7cc0", textDecoration: "none",
+                    }}
+                  >
+                    🗺️ Маршрут дня в Google Maps
+                  </a>
+                )}
                 {note && (
                   <div style={{ marginTop: 12, padding: "9px 13px", background: isRain ? "#dde4ff" : "#faf7f0", borderLeft: `3px solid ${day.color}`, borderRadius: "0 8px 8px 0", fontSize: 12, color: "#666", lineHeight: 1.5 }}>
                     {note}
