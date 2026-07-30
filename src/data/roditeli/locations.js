@@ -11,18 +11,18 @@ export const CAT = {
 export const LOCS = [
   // Осака
   { lat: 34.665, lng: 135.502, name: "Осака (база)",           day: "Ночи 3–5",  cat: "base" },
-  { lat: 34.687, lng: 135.526, name: "Замок Осаки",            day: "День 4",    cat: "sight" },
-  { lat: 34.665, lng: 135.506, name: "Рынок Куромон Итиба",    day: "День 4",    cat: "food" },
-  { lat: 34.672, lng: 135.501, name: "Синсайбаси",             day: "День 4",    cat: "shop" },
-  { lat: 34.668, lng: 135.501, name: "Дотонбори",              day: "День 4",    cat: "sight" },
-  { lat: 34.705, lng: 135.490, name: "Умэда Sky Building",     day: "День 5",    cat: "sight" },
+  { lat: 34.687, lng: 135.526, name: "Замок Осаки",            day: "День 3",    cat: "sight" },
+  { lat: 34.668, lng: 135.501, name: "Дотонбори",              day: "День 3",    cat: "sight" },
+  { lat: 34.855, lng: 135.474, name: "Храм Кацуо-дзи",         day: "День 4",    cat: "trip" },
+  { lat: 34.658, lng: 135.502, name: "Намба Ясака-дзиндзя",    day: "День 4",    cat: "sight" },
+  { lat: 34.652, lng: 135.506, name: "Синсэкай + Цутэнкаку",   day: "День 4",    cat: "sight" },
   // Нара
   { lat: 34.685, lng: 135.843, name: "Парк Нара + Тодайдзи",   day: "День 5",    cat: "trip" },
   { lat: 34.681, lng: 135.848, name: "Касуга Тайся",           day: "День 5",    cat: "trip" },
   // Киото
   { lat: 35.006, lng: 135.768, name: "Киото (база)",           day: "Ночи 6–7",  cat: "base" },
-  { lat: 34.967, lng: 135.773, name: "Фусими Инари Тайся",     day: "День 6",    cat: "sight" },
-  { lat: 35.003, lng: 135.775, name: "Гион",                   day: "День 6",    cat: "sight" },
+  { lat: 34.995, lng: 135.785, name: "Нинэн-дзака → Киёмидзу-дэра", day: "День 6", cat: "sight" },
+  { lat: 34.967, lng: 135.773, name: "Фусими Инари Тайся",     day: "День 7",    cat: "sight" },
   { lat: 35.039, lng: 135.729, name: "Кинкаку-дзи",            day: "День 7",    cat: "sight" },
   { lat: 35.034, lng: 135.718, name: "Рёан-дзи",               day: "День 7",    cat: "sight" },
   { lat: 35.017, lng: 135.667, name: "Арасияма",               day: "День 7",    cat: "sight" },
