@@ -9,7 +9,7 @@ export default function FlightsTab() {
     <div>
       <WarnBanner icon="✈️">{FLIGHTS_CHECKED}</WarnBanner>
 
-      <Card title="Реальные варианты (Москва ↔ Осака/Токио)">
+      <Card title="Билет (Москва ↔ Осака/Токио)">
         {FLIGHTS_OPTIONS.map((r, i) => (
           <Row key={r.name} name={r.name} note={r.note} value={r.value} last={i === FLIGHTS_OPTIONS.length - 1} />
         ))}
