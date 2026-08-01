@@ -15,6 +15,11 @@ export default function BudgetTab() {
         <div style={{ fontSize: 10, letterSpacing: 3, color: T.RED, fontWeight: 700, marginBottom: 8 }}>{BUDGET_HERO.label}</div>
         <div style={{ fontSize: 32, fontWeight: 800, letterSpacing: -1, color: T.TEXT }}>{BUDGET_HERO.range}</div>
         <div style={{ marginTop: 10, fontSize: 12, color: T.MUTED, lineHeight: 1.6 }}>{BUDGET_HERO.note}</div>
+        {BUDGET_HERO.subRange && (
+          <div style={{ marginTop: 8, fontSize: 11, color: "#aaa" }}>
+            {BUDGET_HERO.subLabel}: {BUDGET_HERO.subRange}
+          </div>
+        )}
       </div>
 
       {BUDGET_GROUPS.map((g) => (
