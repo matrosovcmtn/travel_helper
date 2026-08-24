@@ -18,7 +18,9 @@ const KINKAKUJI = { lat: 35.039, lng: 135.729 };
 const ARASHIYAMA = { lat: 35.017, lng: 135.667 };
 const NIJO_CASTLE = { lat: 35.014, lng: 135.748 };
 const TOKYO_AIRBNB = { lat: 35.708, lng: 139.649 };
-const SHINJUKU_GODZILLA = { lat: 35.694, lng: 139.700 };
+const SHINJUKU_GODZILLA = { lat: 35.695238, lng: 139.702426 };
+const SHINJUKU_CAT = { lat: 35.692689, lng: 139.700828 };
+const OMOIDE_YOKOCHO = { lat: 35.692877, lng: 139.700087 };
 const UENO_MUSEUM = { lat: 35.719, lng: 139.776 };
 const AKIHABARA = { lat: 35.702, lng: 139.771 };
 const SHIBUYA = { lat: 35.658, lng: 139.702 };
@@ -140,9 +142,12 @@ export const DAYS = [
       { time: "11:00", text: "Выселение из отеля", loc: KYOTO_HOTEL },
       { time: "", text: "Синкансэн Киото → Токио", sub: "~2ч15–40м" },
       { time: "16:00", text: "Заселение в отель", loc: TOKYO_AIRBNB },
-      { time: "18:00", text: "Синдзюку вечером", sub: "Смотровая Tokyo Metropolitan Government Building (бесплатно) · голова Годзиллы на Toho Building (Кабукитё) · неоновые улицы, Omoide Yokocho — просто погулять", loc: SHINJUKU_GODZILLA },
+      { time: "16:30", text: "Смотровая Tokyo Metropolitan Government Building", sub: "Бесплатный обзорный этаж, вид на город" },
+      { time: "18:00", text: "Голова Годзиллы на Toho Building (Кабукитё)", sub: "Появляется на крыше с рычанием и подсветкой в тёмное время", loc: SHINJUKU_GODZILLA, legMode: "walking" },
+      { time: "19:00", text: "3D-кот на экране Cross Shinjuku Vision", sub: "У восточного выхода станции Синдзюку", loc: SHINJUKU_CAT, legMode: "walking" },
+      { time: "20:30", text: "Омоide Ёкотё (Улица памяти)", sub: "Узкие переулки с якитория-барами — ужин, до ~22:00", loc: OMOIDE_YOKOCHO, legMode: "walking" },
     ],
-    route: [KYOTO_HOTEL, NIJO_CASTLE, TOKYO_AIRBNB, SHINJUKU_GODZILLA],
+    route: [KYOTO_HOTEL, NIJO_CASTLE, TOKYO_AIRBNB, SHINJUKU_GODZILLA, SHINJUKU_CAT, OMOIDE_YOKOCHO],
     routeMode: "driving",
   },
   {
@@ -153,12 +158,11 @@ export const DAYS = [
       { time: "9:30", text: "Уэно — Токийский национальный музей", sub: "Самурайские доспехи, буддийское искусство", loc: UENO_MUSEUM },
       { time: "13:00", text: "Обед в Уэно" },
       { time: "14:30", text: "Акихабара", sub: "Электроника, ретро-игры", loc: AKIHABARA },
-      { time: "17:00", text: "Синдзюку: перекрёсток с котом", sub: "3D-кот на экране Cross Shinjuku Vision у вост. выхода станции", loc: SHINJUKU_GODZILLA },
-      { time: "18:00", text: "Шоппинг в Синдзюку", sub: "Магазины, например Гарри Поттер" },
+      { time: "17:00", text: "Шоппинг в Синдзюку", sub: "Магазины, например Гарри Поттер" },
       { time: "19:00", text: "Сибуя вечером", sub: "Знаменитый перекрёсток в огнях", loc: SHIBUYA },
       { time: "20:00", text: "Минато: Токийская телебашня", sub: "Подсвеченная башня вечером, рядом храм Дзодзё-дзи — классический вид", loc: TOKYO_TOWER },
     ],
-    route: [TOKYO_AIRBNB, UENO_MUSEUM, AKIHABARA, SHINJUKU_GODZILLA, SHIBUYA, TOKYO_TOWER],
+    route: [TOKYO_AIRBNB, UENO_MUSEUM, AKIHABARA, SHIBUYA, TOKYO_TOWER],
     routeMode: "driving",
   },
   {
